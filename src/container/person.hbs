@@ -17,11 +17,13 @@
                 <div>
                     <em>
                         {{#with address}}
-                            {{street}}
-                            {{city}}
-                            {{country}}
-                            {{state}}
-                            {{zip}}
+                            <address>
+                                {{street}}
+                                {{city}}
+                                {{country}}
+                                {{state}}
+                                {{zip}}
+                            </address>
                         {{/with}}
                     </em>
                 </div>
@@ -40,7 +42,7 @@
                         <br>
                         <br>
                         <em>
-                            Graduation date: {{graduationYear}}
+                            <date>Graduation date: {{graduationYear}}</date>
                         </em>
                         <br>
                         <br>
@@ -71,31 +73,34 @@
                             <em>
                                 <br>
                                 <br>
-                                {{startDate}} - {{endDate}}
+                                <date>{{startDate}} - {{endDate}}</date>
                             </em>
                         </li>
                 </div>
+                <br>
                 <div>
-                        <h3>Responsibilities</h3>
+                        <h2>Responsibilities</h2>
                         <em>
                             {{responsibilities}}
                             <br>
                             <br>
-                            {{year_founded}}
+                            <date>{{year_founded}}</date>
                         </em>
                         <br>
                         <br> 
                         {{industry}}
                     </div>
+                    <br>
                     <div>
                         <h2>Employees</h2>
                         {{#each employees}}
                         <ul>
                             <li>
+                                <div>
                                 <strong>{{name}}</strong>
                                 <br>
                                 <br>
-                                {{position}}
+                                <abbr>{{position}}</abbr>
                                 <br>
                                 <br>
                                 <em>
@@ -160,20 +165,20 @@
                                                                     <ul>
                                                                         <li>
                                                                     <h4>Team members</h4>
-                                                            {{#each team_members}}
-                                                                <ul>
-                                                                    <li>
-                                                                        <strong>{{name}}</strong>
-                                                                        <br>
-                                                                        <br>
-                                                                        <em>{{title}}</em>
-                                                                        <br>
-                                                                        <br>
+                                                                    {{#each team_members}}
+                                                                    <ul>
+                                                                        <li>
+                                                                            <strong>{{name}}</strong>
+                                                                            <br>
+                                                                            <br>
+                                                                            <em>{{title}}</em>
+                                                                            <br>
+                                                                            <br>
 
-                                                                    </li>
+                                                                        </li>
 
-                                                                </ul>
-                                                            {{/each}}
+                                                                    </ul>
+                                                                    {{/each}}
                                                                     </li>
                                                                 </ul>
 
@@ -191,8 +196,10 @@
                                         </ul>
                                         {{/each}}
                                         {{/each}} 
+                                        </div>
                                     </li>
                                 </ul>
+
             
                             </li>
                         </ul>

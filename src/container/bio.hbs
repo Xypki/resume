@@ -1,0 +1,221 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+<div>
+    <section>
+        <div>
+            <h1>{{name}}</h1>
+            <em>
+                <date>{{birthdate}} - {{deathdate}}</date>
+            </em>
+            <br>
+            <br>
+            <address>{{birthplace}} - {{deathplace}}</address>
+            <br>
+            {{nationality}}
+            <br>
+            <br>
+            <strong>{{occupation}}</strong>
+            <br>
+            <br>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div>
+            <div>
+                <h2>Known for</h2>
+                {{#each known_for}}
+                <div>
+                    <ul>
+                        <li>
+                            <dfn>{{this}}</dfn>
+                        </li>   
+                    </ul>
+                </div>
+                {{/each}}
+            </div>
+            <br>
+            <div>
+                <h2>Education</h2>
+                <div>
+                    {{#each education}}
+                        {{degree}}
+                        <br>
+                        <br>
+                        <strong>{{field}}</strong>
+                        <br>
+                        <br>
+                        <em>
+                            <address>{{institution}}</address>
+                            <br>
+                            <date>{{year}}</date>
+                        </em>
+                    {{/each}}
+                </div>
+            </div>
+            <br>
+            <div>
+                <h2>Notable publications</h2>
+                <div>
+                    {{#each notable_publications}}
+                    <ul>
+                        <li>
+                            <strong>{{title}}</strong>
+                            <br>
+                            <br>
+                            <em>
+                                <date>{{year}}</date>
+                            </em>
+                            <br>
+                            <br>
+                            {{publisher}}
+                        </li>
+                        <br>
+                    </ul>
+                    {{/each}}
+                </div>
+            </div>
+            <br>
+            <div>
+                <h2>Partners</h2>
+                <div>
+                    {{#each partners}}
+                    <ul>
+                        <li>
+                            <strong>{{name}}</strong>
+                            <br>
+                            <br>
+                            {{relationship}}
+                            <br>
+                            <br>
+                            <em>
+                                <date>{{years}}</date>
+                            </em>
+                        </li>
+                        <br>
+                    </ul>
+                    {{/each}}
+                </div>
+            </div>
+            <div>
+                <h2>Awards</h2>
+                <div>
+                    {{#each awards}}
+                    <ul>
+                        <li>
+                            <strong>{{title}}</strong>
+                            <br>
+                            <br>
+                            <em>
+                                <date>{{year}}</date>
+                            </em>
+                            <br>
+                            <br>
+                            {{description}}
+                        </li>
+                    </ul>
+                    {{/each}}
+                </div>
+            </div>
+            <br>
+            <div>
+                <h2>Influences</h2>
+                <div>
+                    {{#each influences}}
+                    <ul>
+                        <li>
+                            <strong>{{this}}</strong>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </div>
+            </div>
+            <br>
+            <div>
+                <h2>Influenced</h2>
+                <div>
+                    {{#each influenced}}
+                    <ul>
+                        <li>
+                            <strong>{{this}}</strong>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </div>
+            </div>
+            <br>
+            <div>
+                <h2>Quotes</h2>
+                <div>
+                    {{#each quotes}}
+                    <ul>
+                        <li>
+                            <q>
+                                <em>
+                                    {{this}}
+                                </em>
+                            </q>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </div>
+            </div>
+            <br>
+            <div>
+                <h2>Major discoveries</h2>
+                <div>
+                    {{#each major_discoveries}}
+                    <ul>
+                        <li>
+                            <strong>{{title}}</strong>
+                            <br>
+                            <br>
+                            <em>
+                                <date>{{year}}</date>
+                                <br>
+                                <br>
+                                {{description}}
+                            </em>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </div>
+            </div>
+            <br>
+            <div>
+                <h2>Contributions</h2>
+                <div>
+                    {{#with contributions}}
+                    <ul>
+                        <li>
+                            <strong>{{title}}</strong>
+                            <br>
+                            <br>
+                            <em>
+                                <date>{{year}}</date>
+                                <br>
+                                <br>
+                                {{description}}
+                            </em>
+                            <br>
+                            <br>
+                            {{field}}
+                        </li>
+                    </ul>
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <hr>
+    
+</div>
+    
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
