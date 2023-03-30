@@ -1,0 +1,131 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+<div>
+    <section>
+        <div>
+            <div>
+                <h1>{{name}}</h1>
+                <br>
+                <em>
+                    {{description}}
+                    <br>
+                    {{#with history}}
+                    <br>
+                    <date>{{year}}</date>
+                    <br>
+                    <br>
+                </em>
+                <strong>{{founder}}</strong>
+                {{/with}}
+            </div>
+            <br>
+            <hr>
+            <br>
+            <section>
+                <div>
+                    <div>
+                        <h2>Types</h2>
+                        <br>
+                        <ul>
+                        <div>
+                            {{#each types}}
+                                <li>
+                                    <span class="badge rounded-pill text-bg-info">{{this}}</span>
+                                    <br>
+                                </li>
+                            {{/each}}
+                        </div>
+                        </ul>
+                    </div>
+                    <br>
+                    <div>
+                        <div>
+                        <h2>Syntax</h2>
+                        <br>
+                        <ul>
+                            <div>
+                                {{#with syntax}}
+                                    <li>
+                                        {{variables}}
+                                        <br>
+                                    </li>
+                                    <li>
+                                        {{functions}}
+                                        <br>
+                                    </li>
+                                    <li>
+                                        {{conditionals}}
+                                        <br>
+                                    </li>
+                                    <li>
+                                        {{loops}}
+                                        <br>
+                                    </li>
+                                    <li>
+                                        {{classes}}
+                                        <br>
+                                    </li>
+                            {{/with}}
+                            </div>
+                        </ul>
+                    </div>
+                    <br>
+                    <div>
+                        <h2>Libraries</h2>
+                        <br>
+                        <ul>
+                            <div>
+                                {{#each libraries}}
+                                    <li>
+                                        <span class="badge text-bg-primary">{{this}}</span>
+                                        <br>
+                                    </li>
+                                {{/each}}
+                            </div>
+                        </ul>
+                    </div>
+                    <br>
+                    <div>
+                        <h2>Tools</h2>
+                        <br>
+                        <ul>
+                            <div>
+                                {{#each tools}}
+                                    <li>
+                                        <span class="badge rounded-pill text-bg-dark">{{this}}</span>
+                                        <br>
+                                    </li>
+                                {{/each}}
+                            </div>
+                        </ul>
+                    </div>
+                    <br>
+                    <div>
+                        <h2>Community</h2>
+                        <br>
+                        <ul>
+                            <div>
+                                {{#each community}}
+                                    <li>
+                                        <button type="button" class="btn btn-link">{{name}}</button>
+                                        <br>
+                                        <em>{{type}}</em>
+                                        <br>
+                                        <br>
+                                    </li>
+                                {{/each}}
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
