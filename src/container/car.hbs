@@ -1,0 +1,452 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+<div>
+    <section>
+        <div>
+            <div>
+                <h1>{{make}}</h1>
+                <h2>{{model}} <span class="badge rounded-pill bg-success"><date>{{year}}</date></span></h2>
+                <h3><span class="badge bg-secondary">{{color}}</span></h3>
+            </div>
+        </div>
+    </section>
+    <br>
+    <hr>
+    <br>
+    <section>
+        <div>
+            <div>
+                {{#with features}}
+                <div>
+                    {{#with interior}}
+                    <h1>Interior</h1>
+                    <br>
+                    <br>
+                        <div>
+                            <h2>Seats</h2>
+                            <br>
+                            <ul>
+                                <div>
+                                    {{#with seats}}
+                                        <li>
+                                            <span class="badge text-bg-light">{{material}}</span>
+                                            <br>
+                                        </li>
+                                        <li>
+                                            <span class="badge text-bg-dark">{{color}}</span>
+                                            <br>
+                                        </li>
+                                        <li>
+                                            {{#if heated}}
+                                            <span class="badge text-bg-success">heated</span>
+                                            {{else}}
+                                            <span class="badge rounded-pill text-bg-danger">not heated</span>
+                                            {{/if}}
+                                            <br>
+                                        </li>
+                                        <li>
+                                            {{#if ventilated}}
+                                            <span class="badge text-bg-success">ventilated</span>
+                                            {{else}}
+                                            <span class="badge rounded-pill text-bg-danger">not ventilated</span>
+                                            {{/if}}
+                                        </li>
+                                    {{/with}}
+                                </div>
+                            </ul>
+                            <br>
+                            <h2>Dashboard</h2>
+                            <br>
+                            <ul>
+                                <div>
+                                    {{#with dashboard}}
+                                        <li>
+                                            <span class="badge text-bg-light">{{material}}</span>
+                                        </li>
+                                        <li>
+                                            <span class="badge text-bg-dark">{{color}}</span>
+                                        </li>
+                                        <li>
+                                            <span class="badge text-bg-warning">display</span>
+                                        </li>
+                                        <div>
+                                            <ul>
+                                                {{#with display}}
+                                                    <li>
+                                                        <span class="badge rounded-pill text-bg-primary">{{type}}</span>
+                                                        <br>
+                                                    </li>
+                                                    <li>
+                                                        <span class="badge rounded-pill text-bg-info">{{size}}</span>
+                                                        <br>
+                                                    </li>
+                                                    <li>
+                                                        <span class="badge rounded-pill text-bg-light">{{resolution}}</span>
+                                                        <br>
+                                                    </li>
+                                                    <li>
+                                                        {{#if touchscreen}}
+                                                        <span class="badge rounded-pill text-bg-success">touchscreen</span>
+                                                        {{else}}
+                                                        <span class="badge rounded-pill text-bg-danger">not touchscreen</span>
+                                                        {{/if}}
+                                                    </li>
+                                                {{/with}}
+                                            </ul>
+                                        </div>
+                                    {{/with}}
+                            </ul>
+                            <br>
+                            <h2>Audio</h2>
+                            <br>
+                            <ul>
+                                <div>
+                                {{#with audio}}
+                                    <div>
+                                        <li>
+                                            <span class="badge text-bg-primary">{{system}}</span>
+                                        </li>
+                                        <li>
+                                            <span class="badge text-bg-danger">{{speakers}} speakers</span>
+                                        </li>
+                                        <li>
+                                            {{#if subwoofer}}
+                                                <span class="badge rounded-pill text-bg-success">subwoofer</span>
+                                                {{else}}
+                                                no subwoofer
+                                            {{/if}}
+                                        </li>
+                                        <li>
+                                            {{#if bluetooth}}
+                                                <span class="badge rounded-pill text-bg-info">bluetooth</span>
+                                                {{else}}
+                                                no bluetooth
+                                            {{/if}}
+                                        </li>
+                                        <li>
+                                            {{#if bluetooth}}
+                                                <span class="badge rounded-pill text-bg-warning">USB</span>
+                                                {{else}}
+                                                no USB
+                                            {{/if}}
+                                        </li>
+                                    </div>
+                                {{/with}}
+                            </ul>
+                        </div>
+                    {{/with}}
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <div>
+                    <h1>Exterior</h1>
+                    <br>
+                    {{#with exterior}}
+                        <div>
+                            <div>
+                            <br>
+                            <h2>Wheels</h2>
+                            <br>
+                                <div>
+                                    <ul>
+                                    {{#with wheels}}
+                                        <li>
+                                            <span class="badge rounded-pill text-bg-info">{{size}} size</span>
+                                            <br>
+                                        </li>
+                                        <li>
+                                            <span class="badge rounded-pill text-bg-success">{{type}}</span>
+                                            <br>
+                                        </li>
+                                        <li>
+                                            <span class="badge rounded-pill text-bg-light">{{color}}</span>
+                                        </li>
+                                    {{/with}}
+                                </ul>
+                            </div>
+                            <br>
+                            <div>
+                            <h2>Headlights</h2>
+                            <br>
+                                <div>
+                                    <ul>
+                                        {{#with headlights}}
+                                        <li>
+                                            <span class="badge rounded-pill text-bg-primary">{{type}} size</span>
+                                            <br>
+                                        </li>
+                                        <li>
+                                            <span class="badge rounded-pill text-bg-light">{{brightness}}</span>
+                                            <br>
+                                        </li>
+                                        <li>
+                                            {{#if automatic}}
+                                            <span class="badge rounded-pill text-bg-success">automatic</span>
+                                            {{else}}
+                                            <span class="badge rounded-pill text-bg-danger">not automatic</span>
+                                            {{/if}}
+                                        </li>
+                                        {{/with}}
+                                    </ul>
+                                </div>
+                            </div>
+                            <br>
+                            <div>
+                            <h2>Sunroof</h2>
+                            <br>
+                                <div>
+                                    <ul>
+                                        {{#with sunroof}}
+                                        <li>
+                                            <span class="badge rounded-pill text-bg-primary">{{type}}</span>
+                                            <br>
+                                        </li>
+                                        <li>
+                                            <span class="badge rounded-pill text-bg-info">{{size}}</span>
+                                            <br>
+                                        </li>
+                                        <li>
+                                            {{#if automatic}}
+                                            <span class="badge rounded-pill text-bg-success">automatic</span>
+                                            {{else}}
+                                            <span class="badge rounded-pill text-bg-danger">not automatic</span>
+                                            {{/if}}
+                                        </li>
+                                        {{/with}}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    {{/with}}
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <div>
+                    <h1>Safety</h1>
+                    <br>
+                    <br>
+                    {{#with safety}}
+                        <div>
+                            <h2>Airbags</h2>
+                            <br>
+                            <div>
+                                <ul>
+                                {{#with airbags}}
+                                    <div>
+                                        <li>
+                                        <span class="badge rounded-pill text-bg-primary">front: {{front}}</span>
+                                        <br>
+                                        </li>
+                                        <li>
+                                        <span class="badge rounded-pill text-bg-primary">side: {{side}}</span>
+                                        <br>
+                                        </li>
+                                        <li>
+                                        <span class="badge rounded-pill text-bg-primary">knee: {{knee}}</span>
+                                        <br>
+                                        </li>
+                                        <li>
+                                        <span class="badge rounded-pill text-bg-primary">rear: {{rear}}</span>
+                                        <br>
+                                        </li>
+                                    </div>
+                                {{/with}}
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <h2>Assistance</h2>
+                            <br>
+                            <div>
+                                <ul>
+                                {{#with assistance}}
+                                    <div>
+                                        <li>
+                                            {{#if blind_spot_monitoring}}
+                                            <span class="badge rounded-pill text-bg-success">blind spot monitoring</span>
+                                            {{else}}
+                                            <span class="badge rounded-pill text-bg-danger">no blind spot monitoring</span>
+                                            {{/if}}
+                                            <br>
+                                        </li>
+                                        <li>
+                                            {{#if rear_cross_traffic_alert}}
+                                            <span class="badge rounded-pill text-bg-success">rear cross traffic alert</span>
+                                            {{else}}
+                                            <span class="badge rounded-pill text-bg-danger">no rear cross traffic alert</span>
+                                            {{/if}}
+                                            <br>
+                                        </li>
+                                        <li>
+                                            {{#if lane_departure_warning}}
+                                            <span class="badge rounded-pill text-bg-success">lane departure warning</span>
+                                            {{else}}
+                                            <span class="badge rounded-pill text-bg-danger">no lane departure warning</span>
+                                            {{/if}}
+                                            <br>
+                                        </li>
+                                        <li>
+                                            {{#if adaptive_cruise_control}}
+                                            <span class="badge rounded-pill text-bg-success">adaptive cruise control</span>
+                                            {{else}}
+                                            <span class="badge rounded-pill text-bg-danger">no adaptive cruise control</span>
+                                            {{/if}}
+                                            <br>
+                                        </li>
+                                        <li>
+                                            {{#if collision_warning}}
+                                            <span class="badge rounded-pill text-bg-success">collision warning</span>
+                                            {{else}}
+                                            <span class="badge rounded-pill text-bg-danger">no collision warning</span>
+                                            {{/if}}
+                                        </li>
+                                    </div>
+                                {{/with}}
+                                </ul>
+                            </div>
+                        </div>
+                    {{/with}}
+                    </div>
+                    </div>
+                {{/with}}
+                <br>
+                <hr>
+                <br>
+                <div>
+                <h1>Engine</h1>
+                <br>
+                    <div>
+                        {{#with engine}}
+                        <div>
+                            <ul>
+                                <div>
+                                    <li>
+                                        <big><span class="badge rounded-pill text-bg-primary">{{type}}</span></big>
+                                        <br>
+                                    </li>
+                                    <li>
+                                        <big><span class="badge rounded-pill text-bg-warning">displacement {{displacement}}</span></big>
+                                        <br>
+                                    </li>
+                                    <li>
+                                        <big><span class="badge rounded-pill text-bg-info">{{horsepower}} hp</span></big>
+                                        <br>
+                                    </li>
+                                    <li>
+                                        <big><span class="badge rounded-pill text-bg-light">torque {{torque}}</span></big>
+                                        <br>
+                                    </li>
+                                    <li>
+                                        <big><span class="badge rounded-pill text-bg-dark">transmission</span></big>
+                                    </li>
+                                    <ul>
+                                        {{#with transmission}}
+                                        <div>
+                                            <li>
+                                                <span class="badge rounded-pill text-bg-primary">{{type}}</span>
+                                                <br>
+                                            </li>
+                                            <li>
+                                                <span class="badge rounded-pill text-bg-info">gears {{gears}}</span>
+                                                <br>
+                                            </li>
+                                        </div>
+                                        {{/with}}
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div>
+                <h1>Fuel economy</h1>
+                <br>
+                <div>
+                {{#with fuel_economy}}
+                    <div>
+                        <ul>
+                            <div>
+                                <li>
+                                    <big><span class="badge rounded-pill text-bg-primary">city {{city}}</span></big>
+                                    <br>  
+                                </li>
+                                <li>
+                                    <big><span class="badge rounded-pill text-bg-primary">highway {{highway}}</span></big>
+                                    <br>  
+                                </li>
+                                <li>
+                                    <big><span class="badge rounded-pill text-bg-primary">combined {{combined}}</span></big>
+                                    <br>  
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    {{/with}}
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div>
+                <h1>Price</h1>
+                <br>
+                <div>
+                    {{#with price}}
+                    <div>
+                        <ul>
+                            <div>
+                                <li>
+                                    <big><span class="badge rounded-pill text-bg-primary">base: {{base}}</span></big>
+                                    <br>  
+                                </li>
+                                <li>
+                                    <big><span class="badge rounded-pill text-bg-warning">destination {{destination}}</span></big>
+                                    <br>  
+                                </li>
+                                <li>
+                                    <big><span class="badge rounded-pill text-bg-info">options</span></big>
+                                    <br>  
+                                </li>
+                                <ul>
+                                    {{#with options}}
+                                    <div>
+                                        <li>
+                                            <span class="badge rounded-pill text-bg-success">navigation {{navigation}}</span>
+                                            <br>  
+                                        </li>
+                                        <li>
+                                            <span class="badge rounded-pill text-bg-success">moonroof {{moonroof}}</span>
+                                            <br>  
+                                        </li>
+                                        <li>
+                                            <span class="badge rounded-pill text-bg-success">premium paint {{premium_paint}}</span>
+                                            <br>  
+                                        </li>
+                                    </div>
+                                    {{/with}}
+                                </ul>
+                            </div>
+                        </ul>
+                        <br>
+                        <h3>Total: {{total}}</h3>
+                    </div>
+                    {{/with}}
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
