@@ -1,0 +1,103 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+<div>
+    <section>
+        <div>
+            <div>
+                <h1>Facebook</h1>
+                <br>
+                {{#each users}}
+                    <ul>
+                        <div>
+                            <li>
+                                <big><span class="badge text-bg-primary">{{id}}</span></big>
+                                <br>
+                                <strong>{{name}}</strong>
+                                <br>
+                                <em>{{gender}}</em> <big><span class="badge bg-secondary">{{age}}</span></big>
+                                <br>
+                                <br>
+                                <h5>Friends:</h5>
+                                <ul>
+                                    {{#each friends}}
+                                    <div>
+                                        <li>
+                                            <big><span class="badge text-bg-primary">{{id}}</span></big>
+                                            <br>
+                                            <strong>{{name}}</strong>
+                                            <br>
+                                            <em>{{gender}}</em> <big><span class="badge bg-secondary">{{age}}</span></big>
+                                            <br>
+                                            <br>
+                                            <h6>Mutual friends:</h6>
+                                            <ul>
+                                                {{#each mutual_friends}}
+                                                <div>
+                                                    <li>
+                                                        <big><span class="badge text-bg-primary">{{id}}</span></big>
+                                                        <br>
+                                                        <strong>{{name}}</strong>
+                                                        <br>
+                                                        <em>{{gender}}</em> <big><span class="badge bg-secondary">{{age}}</span></big>
+                                                        <br>
+                                                        <br>
+                                                    </li>
+                                                </div>
+                                                {{/each}}
+                                            </ul>
+                                        </li>
+                                    </div>
+                                    {{/each}}
+                                </ul>
+                            </li>
+                        </div>
+                        <br>
+                        <div>
+                            <span class="badge text-bg-info"><h6>Groups</h6></span>
+                            <br>
+                            <br>
+                            <ul>
+                            {{#each groups}}
+                                <li>
+                                <big><span class="badge text-bg-primary">{{id}}</span></big>
+                                <br>
+                                <strong>{{name}}</strong>
+                                <br>
+                                <em>{{description}}</em>
+                                <br>
+                                <br>
+                                <h6>Members:</h6>
+                                <ul>
+                                    {{#each members}}
+                                    <div>
+                                        <li>
+                                            <big><span class="badge text-bg-primary">{{id}}</span></big>
+                                            <br>
+                                            <strong>{{name}}</strong>
+                                            <br>
+                                            <em>{{gender}}</em> <big><span class="badge bg-secondary">{{age}}</span></big>
+                                            <br>
+                                        </li>
+                                    </div>
+                                    <br>
+                                {{/each}}
+                                </ul>
+                            </li>
+                        {{/each}}
+                        </ul>
+                    <br>
+                    <br>
+                    </div>
+                    </ul>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
