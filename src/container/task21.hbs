@@ -1,0 +1,156 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+<div>
+    <section>
+        <div>
+            <div>
+                <div class="card">
+                    {{#with heading}}
+                    <div class="card-body">
+                        <div class="card">
+                            <div class="card-body">
+                                {{#with main}}
+                                    <h1>{{title}}</h1>
+                                    <p>
+                                        {{text}}
+                                    </p>
+                                    <div>
+                                        {{#with button_text}}
+                                            <button class="btn btn-primary">{{solid}}</button>
+                                            <br>
+                                            <br>
+                                            <button class="btn btn-outline-primary">{{outline}}</button>
+                                        {{/with}}
+                                    </div>
+                                {{/with}}
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="card-body">
+                                {{#with second}}
+                                    <h2>{{title}}</h2>
+                                    <p>
+                                        {{text}}
+                                    </p>
+                                    <div>
+                                        {{#with button_text}}
+                                        <p>
+                                            <button class="btn btn-secondary">{{solid}}</button>
+                                        </p>
+                                            <button class="btn btn-outline-secondary">{{outline}}</button>
+                                        {{/with}}
+                                    </div>
+                                {{/with}}
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="card-body">
+                                {{#with subblock}}
+                                    <h3>{{title}}</h3>
+                                    <p>
+                                        {{text}}
+                                    </p>
+                                    <div>
+                                        {{#with button_text}}
+                                        <p>
+                                            <button class="btn btn-dark">{{solid}}</button>
+                                        </p>
+                                            <button class="btn btn-outline-dark">{{outline}}</button>
+                                        {{/with}}
+                                    </div>
+                                {{/with}}
+                            </div>
+                        </div>
+                    {{/with}}
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <div class="card">
+                        <div class="card-body">
+                        {{#with nested_display}}
+                            <div class="display-1">{{title}}</div>
+                            <br>
+                            <div class="card">
+                                {{#with children_display}}
+                                <div class="card-body">
+                                    <p>
+                                        <div class="display-4">{{title}}</div>
+                                    </p>
+                                    <p>
+                                        {{text}}
+                                    </p>
+                                    <div>
+                                    {{#with button}}
+                                        <button class="btn btn-outline-warning">{{text}}</button>
+                                    {{/with}}
+                                    </div>
+                                </div>
+                                {{/with}}
+                            </div>
+                            <p>
+                                <h6>{{header_text}}</h6>
+                            </p>
+                            <div>
+                            {{#with button}}
+                                <button class="btn btn-info">{{text}}</button>
+                            {{/with}}
+                            </div>
+                        {{/with}}
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <div class="card">
+                        {{#with paragraph}}
+                        <div class="card-body">
+                            <p class="text-uppercase">
+                                Paragraph
+                            </p>
+                            <p class="text-lowercase">
+                                Paragraph
+                            </p>
+                            <div>
+                            {{#with button}}
+                                <a href="{{url}}"class="btn btn-link">
+                                    {{text}}
+                                </a>
+                            {{/with}}
+                            </div>
+                            <br>
+                            <div class="card">
+                            <br>
+                            {{#each list_name}}
+                                <div class="card-body">
+                                    <ul>
+                                        <li>
+                                            <div class="card text-left">    
+                                                <a href="{{url}}"class="btn btn-link text-start">
+                                                    {{text}}
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            {{/each}}
+                            </div>
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
