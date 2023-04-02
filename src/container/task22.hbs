@@ -1,0 +1,158 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+<div>
+    <header>
+        <section>
+            <div>
+                {{#with page_header}}
+                    <div>
+                        <h1 class="text-center">{{title}}</h1>
+                        <br>
+                        <p class="text-center text-uppercase">
+                            {{description}}
+                        </p>
+                    </div>
+                {{/with}}
+            </div>
+        </section>
+    </header>
+    <main>
+        <section>
+            {{#with section}}
+                <div>
+                    <div>
+                        {{#with about_us}}
+                            <div>
+                                <div class="card">
+                                {{#with title_list}}
+                                    <div class="card-body">
+                                        <div class="text-end">
+                                            <div class="display-6">{{main}}</div>
+                                            <br>
+                                            <h2>{{sub}}</h2>
+                                            <br>    
+                                            <br>
+                                        </div>
+                                {{/with}}
+                                        <div>
+                                            {{#with button}}
+                                                <button class="btn btn-outline-info">{{text}}</button>
+                                            {{/with}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {{/with}}
+                        <br>
+                        <br>
+                        {{#with advantage}}
+                            <div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div>
+                                            <div class="display-5 text-muted">{{title}}</div>
+                                            <br>
+                                            <div class="card">
+                                                {{#with efficiency}}
+                                                <div class="card-body">
+                                                    <div class="display-4 text-muted">{{title}}</div>
+                                                    <br>
+                                                    <h6>{{sub_title}}</h6>
+                                                    <br>
+                                                    {{description}}
+                                                    <br>
+                                                    <br>
+                                                    <button class="btn btn-outline-warning">{{button}}</button>
+                                                </div>
+                                                {{/with}}
+                                            </div>
+                                            <br>
+                                        </div>
+                                        <div>
+                                            <div class="card">
+                                                {{#with innovation}}
+                                                <div class="card-body">
+                                                    <div class="text-center">
+                                                        <div class="display-4 text-muted">{{title}}</div>
+                                                        <br>
+                                                        <h6>{{sub_title}}</h6>
+                                                        <br>
+                                                        {{description}}
+                                                        <br>
+                                                        <br>
+                                                    </div>
+                                                    <button class="btn btn-outline-warning">{{button}}</button>
+                                                </div>
+                                                {{/with}}
+                                            </div>
+                                            <br>
+                                        </div>
+                                        <div>
+                                            <div class="card">
+                                                {{#with collaboration}}
+                                                <div class="card-body">
+                                                    <div class="text-end">
+                                                        <div class="display-4 text-muted">{{title}}</div>
+                                                        <br>
+                                                        <h6>{{sub_title}}</h6>
+                                                        <br>
+                                                        {{description}}
+                                                        <br>
+                                                        <br>
+                                                    </div>
+                                                    <button class="btn btn-outline-warning">{{button}}</button>
+                                                </div>
+                                                {{/with}}
+                                            </div>
+                                            <br>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        {{/with}}
+                        <br>
+                        <br>
+                        <div>
+                            <div class="card">
+                            {{#with agreement}}
+                                <div class="card-body">
+                                <div class="display-5">{{title}}</div>
+                                <br>
+                                {{#with info}}
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5>{{sub_title}}</h5>
+                                            <br>
+                                            {{#with detail}}
+                                                <div>
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            {{text}}
+                                                            <br>
+                                                            <br>
+                                                            <button class="btn btn-success">{{button}}</button>
+                                                        </div>
+                                                    </div>
+                                                </div>  
+                                            {{/with}}
+                                        </div>
+                                    </div>
+                                {{/with}} 
+                                </div>
+                            {{/with}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/with}}
+        </section>
+    </main>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
