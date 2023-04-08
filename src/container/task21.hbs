@@ -126,20 +126,20 @@
                             </div>
                             <br>
                             <div class="card">
-                            <br>
-                            {{#each list_name}}
                                 <div class="card-body">
                                     <ul>
-                                        <li>
-                                            <div class="card text-left">    
-                                                <a href="{{url}}"class="btn btn-link text-start">
+                                    <br>
+                                        <div class="card">
+                                        {{#each list_name}}
+                                            <li>
+                                                <a href="url" class="btn btn-link">
                                                     {{text}}
                                                 </a>
-                                            </div>
-                                        </li>
+                                            </li>
+                                        {{/each}}
+                                        </div>
                                     </ul>
                                 </div>
-                            {{/each}}
                             </div>
                         </div>
                         {{/with}}
