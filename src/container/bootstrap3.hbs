@@ -1,0 +1,173 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+<div>
+    <main>
+        <div class="card text-bg-dark">
+            <img src="https://picsum.photos/400/200" class="card-img-top" alt="Product photo">
+            <div class="card-body">
+                <h5 class="card-title text-bg-primary">Product #15361</h5>
+                <p class="text-bg-secondary">
+                    USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm
+                </p>
+                <a href="#" class="btn btn-primary">Open</a>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        
+        <div class="card text-bg-primary">
+            <div class="card-header">
+                <div>Menu</div>
+            </div>
+                <ul class="list-group">
+                    <li class="list-group-item text-bg-info">
+                        <a href="#" class="btn btn-link">Home page</a>
+                    </li>
+                    <li class="list-group-item text-bg-warning">
+                        <a href="#" class="btn btn-link">Summary page</a>
+                    </li>
+                    <li class="list-group-item text-bg-danger">
+                        <a href="#" class="btn btn-link">Skills page</a>
+                    </li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-dark btn-sm">Update list</button>
+                </div>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+
+        <table class="table table-bordered text-bg-success">
+            <thead>
+                <tr>
+                    <th>
+                        #id
+                    </th>
+                    <th>
+                        name
+                    </th>
+                    <th>
+                        age
+                    </th>
+                </tr>
+            </thead>
+                    
+            <tbody>
+                <tr>
+                    <th>
+                        1
+                    </th>
+                    <td>
+                        John
+                    </td>
+                    <td>
+                        35
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        2
+                    </th>
+                    <td>
+                        Ivan
+                    </td>
+                    <td>
+                        29
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="card text-bg-success">
+            <div class="card-header text-center">Title</div>
+            <div class="card-body text-center">
+                <h6 class="card-title">This is title</h6>
+                <p>This is content</p>
+                <button class="btn btn-light">Click</button>
+            </div>
+            <div class="card-footer text-center">Footer</div>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="card text-bg-success">
+                <div class="card-header text-center">Title</div>
+                <div class="card-body text-center">
+                    <h6 class="card-title">This is title</h6>
+                    <p>This is content</p>
+                    <button class="btn btn-light">Click</button>
+                </div>
+                <div class="card-footer text-center">Footer</div>
+            </div>
+            <div class="col-3">
+                <div class="card text-bg-success">
+                <div class="card-header text-center">Title</div>
+                <div class="card-body text-center">
+                    <h6 class="card-title">This is title</h6>
+                    <p>This is content</p>
+                    <button class="btn btn-light">Click</button>
+                </div>
+                <div class="card-footer text-center">Footer</div>
+            </div>
+        </div>
+    </main>
+    <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <img src="http://html-plus.in.ua/wp-content/uploads/2018/07/headphones-01.jpg" alt="headphones-01" class="card-img-top">
+        <div class="card-body">
+          <div class="card-title">
+            <h5>Headphones 1</h5>
+          </div>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptatibus enim dignissimos a temporibus ratione.</p>
+          <a href="#" class="btn btn-outline-secondary">Buy Headphones 1</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <img src="http://html-plus.in.ua/wp-content/uploads/2018/07/headphones-02.jpg" alt="headphones-02" class="card-img-top">
+        <div class="card-body">
+          <div class="card-title">
+            <h5>Headphones 2</h5>
+          </div>
+          <p class="card-text">Quidem nam voluptatum sunt enim id. Illo minima aperiam ullam dolore natus quidem neque quam.</p>
+          <a href="#" class="btn btn-outline-secondary">Buy Headphones 2</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <img src="http://html-plus.in.ua/wp-content/uploads/2018/07/headphones-03.jpg" alt="headphones-03" class="card-img-top">
+        <div class="card-body">
+          <div class="card-title">
+            <h5>Headphones 3</h5>
+          </div>
+          <p class="card-text">Ad soluta amet blanditiis asperiores libero doloremque ipsum  impedit perferendis adipisci culpa consequuntur.</p>
+          <a href="" class="btn btn-outline-secondary">Buy Headphones 3</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
