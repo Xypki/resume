@@ -8,39 +8,28 @@
             <div>
                 <div>
                     <h1>Languages</h1>
-                    <br>
-                    <hr>
+                    <hr class="my-5">
     </section>
     <section>
                     <ul>
                     <div>
                     {{#each languages}}
                     <li>
-                        <h3>{{name}}</h3>
-                        <br>
+                        <h3 class="mb-4">{{name}}</h3>
                         {{version}}
-                        <br>
-                        <br>
-                        <em>{{description}}</em>
-                        <br>
-                        <br>
+                        <p class="mt-4"><em>{{description}}</em></p>
                         <div>
                         {{#each elements}}
                         <ul>
                             <li>
                                 <h3>{{name}}</h3>
                                 <em>{{description}}</em>
-                                <ul>
-                                <br>
+                                <ul class="mt-4">
                                 <div>
                                 {{#each attributes}}
                                     <li>
                                         <strong>{{name}}</strong>
-                                        <br>
-                                        <br>
-                                        <em>{{description}}</em>
-                                        <br>
-                                        <br>
+                                        <p class="mb-4"><em>{{description}}</em></p>
                                     </li>
                                 {{/each}}
                                 </div>
@@ -56,20 +45,13 @@
                     {{#each properties}}
                         <li>
                             <h3>{{name}}</h3>
-                            <br>
-                            <em>{{description}}</em>
-                            <br>
-                            <br>
+                            <p class="mt-2"><em>{{description}}</em></p>
                             <div>
                             <ul>
                             {{#each values}}
-                                <li>
+                                <li class="mb-4">
                                 <strong>{{value}}</strong>
-                                <br>
-                                <br>
-                                <em>{{description}}</em>
-                                <br>
-                                <br>
+                                <p><em>{{description}}</em></p>
                                 </li>
                             {{/each}}
                             </ul>
@@ -84,21 +66,14 @@
                         {{#each functions}}
                             <li>
                                 <h3>{{name}}</h3>
-                                <br>
-                                <em>{{description}}</em>
-                                <br>
-                                <br>
+                                <p><em>{{description}}</em></p>
                                 <div>
                                     <ul>
                                         {{#each parameters}}
                                             <li>
                                                 <h4>{{name}}</h4>
-                                                {{type}}
-                                                <br>
-                                                <br>
-                                                <em>{{description}}</em>
-                                                <br>
-                                                <br>
+                                                {{type}}  
+                                                <p class="mt-2"><em>{{description}}</em></p>
                                             </li>
                                         {{/each}}
                                     </ul>

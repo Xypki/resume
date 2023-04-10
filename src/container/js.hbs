@@ -6,114 +6,87 @@
     <section>
         <div>
             <div>
-                <h1>{{name}}</h1>
-                <br>
+                <h1 class="pt-4 mb-4">{{name}}</h1>
                 <em>
-                    {{description}}
-                    <br>
+                    <p class="mb-4">{{description}}</p>
                     {{#with history}}
-                    <br>
-                    <date>{{year}}</date>
-                    <br>
-                    <br>
+                    <p class="mb-4"><date>{{year}}</date></p>
                 </em>
                 <strong>{{founder}}</strong>
                 {{/with}}
             </div>
-            <br>
-            <hr>
-            <br>
+            <hr class="my-5">
             <section>
                 <div>
-                    <div>
-                        <h2>Types</h2>
-                        <br>
+                    <div class="mb-5">
+                        <h2 class="mb-4">Types</h2>
                         <ul>
                         <div>
                             {{#each types}}
                                 <li>
                                     <span class="badge rounded-pill text-bg-info">{{this}}</span>
-                                    <br>
                                 </li>
                             {{/each}}
                         </div>
                         </ul>
                     </div>
-                    <br>
                     <div>
                         <div>
-                        <h2>Syntax</h2>
-                        <br>
+                        <h2 class="mb-4">Syntax</h2>
                         <ul>
                             <div>
                                 {{#with syntax}}
                                     <li>
                                         {{variables}}
-                                        <br>
                                     </li>
                                     <li>
                                         {{functions}}
-                                        <br>
                                     </li>
                                     <li>
                                         {{conditionals}}
-                                        <br>
                                     </li>
                                     <li>
                                         {{loops}}
-                                        <br>
                                     </li>
                                     <li>
                                         {{classes}}
-                                        <br>
                                     </li>
                             {{/with}}
                             </div>
                         </ul>
                     </div>
-                    <br>
-                    <div>
-                        <h2>Libraries</h2>
-                        <br>
+                    <div class="mt-5">
+                        <h2 class="mb-4">Libraries</h2>
                         <ul>
                             <div>
                                 {{#each libraries}}
                                     <li>
                                         <span class="badge text-bg-primary">{{this}}</span>
-                                        <br>
                                     </li>
                                 {{/each}}
                             </div>
                         </ul>
                     </div>
-                    <br>
-                    <div>
-                        <h2>Tools</h2>
-                        <br>
+                    <div class="mt-5">
+                        <h2 class="mb-4">Tools</h2>
                         <ul>
                             <div>
                                 {{#each tools}}
                                     <li>
                                         <span class="badge rounded-pill text-bg-dark">{{this}}</span>
-                                        <br>
                                     </li>
                                 {{/each}}
                             </div>
                         </ul>
                     </div>
-                    <br>
-                    <div>
-                        <h2>Community</h2>
-                        <br>
+                    <div class="mt-5">
+                        <h2 class="mb-4">Community</h2>
                         <ul>
                             <div>
                                 {{#each community}}
-                                    <li>
-                                        <button type="button" class="btn btn-link">{{name}}</button>
-                                        <br>
+                                    <li class="mb-4">
+                                        <p class="mb-0"><button type="button" class="btn btn-link">{{name}}</button></p>
                                         <em>{{type}}</em>
-                                        <br>
-                                        <br>
                                     </li>
                                 {{/each}}
                             </div>

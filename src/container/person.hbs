@@ -6,14 +6,13 @@
     <section>
         {{#with person}}
             <div>
-                <div>
-                    <h1>{{name}}</h1>
+                <div class="mb-3">
+                    <h1 class="pt-4">{{name}}</h1>
                     <em>
                         {{gender}}
                         {{age}}
                     </em>
                 </div>
-                <br>
                 <div>
                     <em>
                         {{#with address}}
@@ -28,24 +27,20 @@
                     </em>
                 </div>
             </div>
-        <br>
-        <hr>
-        <br>
+        <hr class="my-5">
     </section>
-        <div>
+        <div class="mb-4">
             <section>
-                <h1>Education</h1>
+                <h1 class="mb-4">Education</h1>
                 <ul>
                 {{#each education}}
                     <li>
-                        <strong>{{university}}</strong>
-                        <br>
-                        <br>
-                        <em>
-                            <date>Graduation date: {{graduationYear}}</date>
-                        </em>
-                        <br>
-                        <br>
+                        <p><strong>{{university}}</strong></p>
+                        <p class="mb-4">
+                            <em>
+                                <date>Graduation date: {{graduationYear}}</date>
+                            </em>
+                        </p>
                         <ul>
                             <li>
                                 {{degree}}
@@ -61,120 +56,85 @@
         </div>
         <div>
             <section>
-                <div>
-                <h1>Work experience</h1>
+                <div class="mb-4">
+                <h1 class="mb-4">Work experience</h1>
                 <ul>
                     {{#each workExperience}}
                         <li>
-                            <strong>{{company}}</strong>
-                            <br>
-                            <br>
+                            <p><strong>{{company}}</strong></p>
                             {{title}}
-                            <em>
-                                <br>
-                                <br>
-                                <date>{{startDate}} - {{endDate}}</date>
-                            </em>
+                            <p class="mb-4 mt-3">
+                                <em>
+                                    <date>{{startDate}} - {{endDate}}</date>
+                                </em>
+                            </p>
                         </li>
                 </div>
-                <br>
-                <div>
-                        <h2>Responsibilities</h2>
+                <div class="mb-4">
+                        <h2 class="mb-4">Responsibilities</h2>
                         <em>
-                            {{responsibilities}}
-                            <br>
-                            <br>
+                            <p>{{responsibilities}}</p>
                             <date>{{year_founded}}</date>
                         </em>
-                        <br>
-                        <br> 
-                        {{industry}}
+                        <p class="mt-3">{{industry}}</p>
                     </div>
-                    <br>
-                    <div>
-                        <h2>Employees</h2>
+                    <div class="mb-4">
+                        <h2 class="mb-4">Employees</h2>
                         {{#each employees}}
                         <ul>
                             <li>
                                 <div>
-                                <strong>{{name}}</strong>
-                                <br>
-                                <br>
+                                <p><strong>{{name}}</strong></p>
                                 <abbr>{{position}}</abbr>
-                                <br>
-                                <br>
-                                <em>
-                                    {{department}}
-                                </em>
-                                <h3>Projects</h3>
+                                <p class="mt-3">
+                                    <em>
+                                        {{department}}
+                                    </em>
+                                </p>
+                                <h3 class="mb-4">Projects</h3>
                                 {{#each projects}}
                                 <ul>
                                     <li>
-                                        <strong>{{name}}</strong>
-                                        <br>
-                                        <br>
-                                        <em>{{description}}</em>
-                                        <br>
-                                        <br>
+                                        <p><strong>{{name}}</strong></p>
+                                        <p><em>{{description}}</em></p>
                                         {{status}}
-                                        <h4>Teams</h4>
+                                        <h4 class="my-4">Teams</h4>
                                         {{#each teams}}
                                         <ul>
                                             <li>
-                                                <strong>{{team_name}}</strong>
-                                                <br>
-                                                <br>
+                                                <p><strong>{{team_name}}</strong></p>
                                                 {{#with team_leader}}
                                                     <strong>{{name}}</strong>
-                                                    <br>
-                                                    <br>
-                                                    <em>{{title}}</em>
-                                                    <br>
-                                                    <br>
+                                                    <p class="mt-3"><em>{{title}}</em></p>
                                                     <a href="#">{{email}}</a>
                                                 {{/with}}
                                                 <ul>
                                                     <li>
-                                                <h4>Team members</h4>
+                                                <h4 class="my-4">Team members</h4>
                                                 {{#each team_members}}
                                                 <ul>
                                                     <li>
-                                                        <strong>{{name}}</strong>
-                                                        <br>
-                                                        <br>
-                                                        <em>{{title}}</em>
-                                                        <br>
-                                                        <br>
+                                                        <p><strong>{{name}}</strong></p>
+                                                        <p><em>{{title}}</em></p>
                                                         <a href="#">{{email}}</a>
-                                                        <br>
-                                                        <br>
-                                                        {{skills}}
+                                                        <p class="mt-3">{{skills}}</p>
                                                         <ul>
                                                         <li>
-                                                        <h4>Projects</h4>
+                                                        <h4 class="mb-4">Projects</h4>
                                                         {{#each projects}}
                                                             <ul>
                                                                 <li>
-                                                                    <strong>{{name}}</strong>
-                                                                    <br>
-                                                                    <br>
+                                                                    <p><strong>{{name}}</strong></p>
                                                                     <em>{{description}}</em>
-                                                                    <br>
-                                                                    <br>
-                                                                    {{technologies}}
+                                                                    <p class="mt-3">{{technologies}}</p>
                                                                     <ul>
                                                                         <li>
-                                                                    <h4>Team members</h4>
+                                                                    <h4 class="my-4">Team members</h4>
                                                                     {{#each team_members}}
                                                                     <ul>
                                                                         <li>
                                                                             <strong>{{name}}</strong>
-                                                                            <br>
-                                                                            <br>
-                                                                            <em>{{title}}</em>
-                                                                            <br>
-                                                                            <br>
-
+                                                                            <p class="mb-4"><em>{{title}}</em></p>
                                                                         </li>
 
                                                                     </ul>
@@ -211,8 +171,7 @@
 
             </section>
         </div>
-        <br>
-        <hr>
+        <hr class="mt-5">
     {{/with}}
 </div>
 

@@ -23,17 +23,13 @@
             {{/with}}
         </div>
     </section>
-    <hr>
-    <br>
+    <hr class="mb-4">
     <section>
         <div>
             {{#with header}}
             <div>
                 <h1>{{title}}</h1>
-                <br>
-                {{description}}
-                <br>
-                <br>
+                <p class="my-3">{{description}}</p>
                 {{#with button}}
                     <a class="btn btn-primary" href="{{link}}">{{text}}</a>
                 {{/with}}
@@ -41,14 +37,11 @@
             {{/with}}
         </div>
     </section>
-    <br>
-    <hr>
-    <br>
+    <hr class="my-5">
     <section>
         <div>
             {{#with city}}
-            <h2>{{title}}</h2>
-            <br>
+            <h2 class="mb-4">{{title}}</h2>
             <div class="row">
                 {{#each cards}}
                 <div class="col-md-6 mb-4">
@@ -73,14 +66,12 @@
             {{/with}}
         </div>
     </section>
-    <hr>
-    <br>
+    <hr class="mb-4">
     <section>
         <div>
             {{#with winner}}
             <div>
-                <h2>{{title}}</h2>
-                <br>
+                <h2 class="mb-4">{{title}}</h2>
                 {{#with table}}
                 <table class="table">
                     <thead>
@@ -106,14 +97,11 @@
             {{/with}}
         </div>
     </section>
-    <br>
-    <hr>
-    <br>
+    <hr class="my-5">
     <section>
         <div>
             {{#with gallery}}
-            <h2>{{title}}</h2>
-            <br>
+            <h2 class="mb-4">{{title}}</h2>
             <div class="row">
                 {{#each cards}}
                 <div class="col-md-4">
@@ -133,14 +121,11 @@
             {{/with}}
         </div>
     </section>
-    <br>
-    <hr>
-    <br>
+    <hr class="my-5">
     <section>
         <div>
             {{#with relaxion}}
-            <div class="display-3">{{title}}</div>
-            <br>
+            <div class="display-3 mb-4">{{title}}</div>
             <div class="row">
                 {{#each cards}}
                 <div class="col-md-6 mb-4">
@@ -159,8 +144,7 @@
             {{/with}}
         </div>
     </section>
-    <hr>
-    <br>
+    <hr class="mb-5">
     <section>
         <div class="text-center">
             {{#with rest}}
@@ -182,14 +166,11 @@
             {{/with}}
         </div>
     </section>
-    <br>
-    <hr>
-    <br>
+    <hr class="mt-5 mb-4">
     <section>
         <div>
             {{#with proposition}}
-            <div class="display-2">{{title}}</div>
-            <br>
+            <div class="display-2 mb-4">{{title}}</div>
             <div class="row">
                 {{#each card}}
                 <div class="col-md-4">
@@ -208,13 +189,11 @@
         {{/with}}
         </div>
     </section>
-    <br>
-    <hr>
+    <hr class="mt-4">
     <section>
         <div>
             {{#with footer}}
-            <h5>{{title}}</h5>
-            <br>
+            <h5 class="mb-4">{{title}}</h5>
             <div class="row">
             <div class="col-md-4">
             <div class="card border-0">

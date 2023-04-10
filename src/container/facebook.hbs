@@ -6,43 +6,30 @@
     <section>
         <div>
             <div>
-                <h1>Facebook</h1>
-                <br>
+                <h1 class="pt-4">Facebook</h1>
                 {{#each users}}
                     <ul>
                         <div>
                             <li>
-                                <big><span class="badge text-bg-primary">{{id}}</span></big>
-                                <br>
+                                <p class="mb-0 mt-5"><big><span class="badge text-bg-primary">{{id}}</span></big></p>
                                 <strong>{{name}}</strong>
-                                <br>
-                                <em>{{gender}}</em> <big><span class="badge bg-secondary">{{age}}</span></big>
-                                <br>
-                                <br>
+                                <p class="mb-5"><em>{{gender}}</em> <big><span class="badge bg-secondary">{{age}}</span></big></p>
                                 <h5>Friends:</h5>
                                 <ul>
                                     {{#each friends}}
                                     <div>
                                         <li>
-                                            <big><span class="badge text-bg-primary">{{id}}</span></big>
-                                            <br>
-                                            <strong>{{name}}</strong>
-                                            <br>
+                                            <p class="mb-0"><big><span class="badge text-bg-primary">{{id}}</span></big></p>
+                                            <p class="mb-0"><strong>{{name}}</strong></p>
                                             <em>{{gender}}</em> <big><span class="badge bg-secondary">{{age}}</span></big>
-                                            <br>
-                                            <br>
-                                            <h6>Mutual friends:</h6>
+                                            <h6 class="mt-4">Mutual friends:</h6>
                                             <ul>
                                                 {{#each mutual_friends}}
                                                 <div>
-                                                    <li>
-                                                        <big><span class="badge text-bg-primary">{{id}}</span></big>
-                                                        <br>
-                                                        <strong>{{name}}</strong>
-                                                        <br>
+                                                    <li class="mb-4">
+                                                        <p class="mb-0"><big><span class="badge text-bg-primary">{{id}}</span></big></p>
+                                                        <p class="mb-0"><strong>{{name}}</strong></p>
                                                         <em>{{gender}}</em> <big><span class="badge bg-secondary">{{age}}</span></big>
-                                                        <br>
-                                                        <br>
                                                     </li>
                                                 </div>
                                                 {{/each}}
@@ -55,40 +42,29 @@
                         </div>
                         <br>
                         <div>
-                            <span class="badge text-bg-info"><h6>Groups</h6></span>
-                            <br>
-                            <br>
+                            <span class="badge text-bg-info mb-4"><h6>Groups</h6></span>
                             <ul>
                             {{#each groups}}
                                 <li>
-                                <big><span class="badge text-bg-primary">{{id}}</span></big>
-                                <br>
-                                <strong>{{name}}</strong>
-                                <br>
+                                <p class="mb-0"><big><span class="badge text-bg-primary">{{id}}</span></big></p>
+                                <p class="mb-0"><strong>{{name}}</strong></p>
                                 <em>{{description}}</em>
-                                <br>
-                                <br>
-                                <h6>Members:</h6>
-                                <ul>
+                                <h6 class="mt-4 mb-3">Members:</h6>
+                                <ul class="mb-4">
                                     {{#each members}}
                                     <div>
-                                        <li>
-                                            <big><span class="badge text-bg-primary">{{id}}</span></big>
-                                            <br>
-                                            <strong>{{name}}</strong>
-                                            <br>
+                                        <li class="mb-3">
+                                            <p class="mb-0"><big><span class="badge text-bg-primary">{{id}}</span></big></p>
+                                            <p class="mb-0"><strong>{{name}}</strong></p>
                                             <em>{{gender}}</em> <big><span class="badge bg-secondary">{{age}}</span></big>
                                             <br>
                                         </li>
                                     </div>
-                                    <br>
                                 {{/each}}
                                 </ul>
                             </li>
                         {{/each}}
                         </ul>
-                    <br>
-                    <br>
                     </div>
                     </ul>
                 {{/each}}

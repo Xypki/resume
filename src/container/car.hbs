@@ -4,7 +4,7 @@
 --}}
 <div>
     <section>
-        <div>
+        <div class="pt-4">
             <div>
                 <h1>{{make}}</h1>
                 <h2>{{model}} <span class="badge rounded-pill bg-success"><date>{{year}}</date></span></h2>
@@ -12,31 +12,24 @@
             </div>
         </div>
     </section>
-    <br>
-    <hr>
-    <br>
+    <hr class="my-5">
     <section>
         <div>
             <div>
                 {{#with features}}
                 <div>
                     {{#with interior}}
-                    <h1>Interior</h1>
-                    <br>
-                    <br>
+                    <h1 class="mb-5">Interior</h1>
                         <div>
-                            <h2>Seats</h2>
-                            <br>
+                            <h2 class="mb-4">Seats</h2>
                             <ul>
                                 <div>
                                     {{#with seats}}
                                         <li>
                                             <span class="badge text-bg-light">{{material}}</span>
-                                            <br>
                                         </li>
                                         <li>
                                             <span class="badge text-bg-dark">{{color}}</span>
-                                            <br>
                                         </li>
                                         <li>
                                             {{#if heated}}
@@ -44,7 +37,6 @@
                                             {{else}}
                                             <span class="badge rounded-pill text-bg-danger">not heated</span>
                                             {{/if}}
-                                            <br>
                                         </li>
                                         <li>
                                             {{#if ventilated}}
@@ -56,9 +48,7 @@
                                     {{/with}}
                                 </div>
                             </ul>
-                            <br>
-                            <h2>Dashboard</h2>
-                            <br>
+                            <h2 class="my-4">Dashboard</h2>
                             <ul>
                                 <div>
                                     {{#with dashboard}}
@@ -76,15 +66,12 @@
                                                 {{#with display}}
                                                     <li>
                                                         <span class="badge rounded-pill text-bg-primary">{{type}}</span>
-                                                        <br>
                                                     </li>
                                                     <li>
                                                         <span class="badge rounded-pill text-bg-info">{{size}}</span>
-                                                        <br>
                                                     </li>
                                                     <li>
                                                         <span class="badge rounded-pill text-bg-light">{{resolution}}</span>
-                                                        <br>
                                                     </li>
                                                     <li>
                                                         {{#if touchscreen}}
@@ -98,9 +85,7 @@
                                         </div>
                                     {{/with}}
                             </ul>
-                            <br>
-                            <h2>Audio</h2>
-                            <br>
+                            <h2 class="my-4">Audio</h2>
                             <ul>
                                 <div>
                                 {{#with audio}}
@@ -138,28 +123,21 @@
                         </div>
                     {{/with}}
                     </div>
-                    <br>
-                    <hr>
-                    <br>
+                    <hr class="my-5">
                     <div>
-                    <h1>Exterior</h1>
-                    <br>
+                    <h1 class="mb-5">Exterior</h1>
                     {{#with exterior}}
                         <div>
                             <div>
-                            <br>
-                            <h2>Wheels</h2>
-                            <br>
+                            <h2 class="my-4">Wheels</h2>
                                 <div>
                                     <ul>
                                     {{#with wheels}}
                                         <li>
                                             <span class="badge rounded-pill text-bg-info">{{size}} size</span>
-                                            <br>
                                         </li>
                                         <li>
                                             <span class="badge rounded-pill text-bg-success">{{type}}</span>
-                                            <br>
                                         </li>
                                         <li>
                                             <span class="badge rounded-pill text-bg-light">{{color}}</span>
@@ -167,20 +145,16 @@
                                     {{/with}}
                                 </ul>
                             </div>
-                            <br>
                             <div>
-                            <h2>Headlights</h2>
-                            <br>
+                            <h2 class="my-4">Headlights</h2>
                                 <div>
                                     <ul>
                                         {{#with headlights}}
                                         <li>
                                             <span class="badge rounded-pill text-bg-primary">{{type}} size</span>
-                                            <br>
                                         </li>
                                         <li>
                                             <span class="badge rounded-pill text-bg-light">{{brightness}}</span>
-                                            <br>
                                         </li>
                                         <li>
                                             {{#if automatic}}
@@ -193,20 +167,16 @@
                                     </ul>
                                 </div>
                             </div>
-                            <br>
                             <div>
-                            <h2>Sunroof</h2>
-                            <br>
+                            <h2 class="my-4">Sunroof</h2>
                                 <div>
                                     <ul>
                                         {{#with sunroof}}
                                         <li>
                                             <span class="badge rounded-pill text-bg-primary">{{type}}</span>
-                                            <br>
                                         </li>
                                         <li>
                                             <span class="badge rounded-pill text-bg-info">{{size}}</span>
-                                            <br>
                                         </li>
                                         <li>
                                             {{#if automatic}}
@@ -222,46 +192,35 @@
                         </div>
                     {{/with}}
                     </div>
-                    <br>
-                    <hr>
-                    <br>
+                    <hr class="my-5">
                     <div>
-                    <h1>Safety</h1>
-                    <br>
-                    <br>
+                    <h1 class="mb-5">Safety</h1>
                     {{#with safety}}
                         <div>
-                            <h2>Airbags</h2>
-                            <br>
+                            <h2 class="my-4">Airbags</h2>
                             <div>
                                 <ul>
                                 {{#with airbags}}
                                     <div>
                                         <li>
-                                        <span class="badge rounded-pill text-bg-primary">front: {{front}}</span>
-                                        <br>
+                                            <span class="badge rounded-pill text-bg-primary">front: {{front}}</span>
                                         </li>
                                         <li>
-                                        <span class="badge rounded-pill text-bg-primary">side: {{side}}</span>
-                                        <br>
+                                            <span class="badge rounded-pill text-bg-primary">side: {{side}}</span>
                                         </li>
                                         <li>
-                                        <span class="badge rounded-pill text-bg-primary">knee: {{knee}}</span>
-                                        <br>
+                                            <span class="badge rounded-pill text-bg-primary">knee: {{knee}}</span>
                                         </li>
                                         <li>
-                                        <span class="badge rounded-pill text-bg-primary">rear: {{rear}}</span>
-                                        <br>
+                                            <span class="badge rounded-pill text-bg-primary">rear: {{rear}}</span>
                                         </li>
                                     </div>
                                 {{/with}}
                                 </ul>
                             </div>
                         </div>
-                        <br>
                         <div>
-                            <h2>Assistance</h2>
-                            <br>
+                            <h2 class="my-4">Assistance</h2>
                             <div>
                                 <ul>
                                 {{#with assistance}}
@@ -272,7 +231,6 @@
                                             {{else}}
                                             <span class="badge rounded-pill text-bg-danger">no blind spot monitoring</span>
                                             {{/if}}
-                                            <br>
                                         </li>
                                         <li>
                                             {{#if rear_cross_traffic_alert}}
@@ -280,7 +238,6 @@
                                             {{else}}
                                             <span class="badge rounded-pill text-bg-danger">no rear cross traffic alert</span>
                                             {{/if}}
-                                            <br>
                                         </li>
                                         <li>
                                             {{#if lane_departure_warning}}
@@ -288,7 +245,6 @@
                                             {{else}}
                                             <span class="badge rounded-pill text-bg-danger">no lane departure warning</span>
                                             {{/if}}
-                                            <br>
                                         </li>
                                         <li>
                                             {{#if adaptive_cruise_control}}
@@ -296,7 +252,6 @@
                                             {{else}}
                                             <span class="badge rounded-pill text-bg-danger">no adaptive cruise control</span>
                                             {{/if}}
-                                            <br>
                                         </li>
                                         <li>
                                             {{#if collision_warning}}
@@ -314,12 +269,9 @@
                     </div>
                     </div>
                 {{/with}}
-                <br>
-                <hr>
-                <br>
+                <hr class="my-5">
                 <div>
-                <h1>Engine</h1>
-                <br>
+                <h1 class="mb-4">Engine</h1>
                     <div>
                         {{#with engine}}
                         <div>
@@ -327,19 +279,15 @@
                                 <div>
                                     <li>
                                         <big><span class="badge rounded-pill text-bg-primary">{{type}}</span></big>
-                                        <br>
                                     </li>
                                     <li>
                                         <big><span class="badge rounded-pill text-bg-warning">displacement {{displacement}}</span></big>
-                                        <br>
                                     </li>
                                     <li>
                                         <big><span class="badge rounded-pill text-bg-info">{{horsepower}} hp</span></big>
-                                        <br>
                                     </li>
                                     <li>
                                         <big><span class="badge rounded-pill text-bg-light">torque {{torque}}</span></big>
-                                        <br>
                                     </li>
                                     <li>
                                         <big><span class="badge rounded-pill text-bg-dark">transmission</span></big>
@@ -349,11 +297,9 @@
                                         <div>
                                             <li>
                                                 <span class="badge rounded-pill text-bg-primary">{{type}}</span>
-                                                <br>
                                             </li>
                                             <li>
                                                 <span class="badge rounded-pill text-bg-info">gears {{gears}}</span>
-                                                <br>
                                             </li>
                                         </div>
                                         {{/with}}
@@ -364,12 +310,9 @@
                         {{/with}}
                     </div>
                 </div>
-                <br>
-                <hr>
-                <br>
+                <hr class="my-5">
                 <div>
-                <h1>Fuel economy</h1>
-                <br>
+                <h1 class="mb-4">Fuel economy</h1>
                 <div>
                 {{#with fuel_economy}}
                     <div>
@@ -377,27 +320,21 @@
                             <div>
                                 <li>
                                     <big><span class="badge rounded-pill text-bg-primary">city {{city}}</span></big>
-                                    <br>  
                                 </li>
                                 <li>
                                     <big><span class="badge rounded-pill text-bg-primary">highway {{highway}}</span></big>
-                                    <br>  
                                 </li>
                                 <li>
                                     <big><span class="badge rounded-pill text-bg-primary">combined {{combined}}</span></big>
-                                    <br>  
                                 </li>
                             </div>
                         </ul>
                     </div>
                     {{/with}}
                 </div>
-                <br>
-                <hr>
-                <br>
+                <hr class="my-5">
                 <div>
-                <h1>Price</h1>
-                <br>
+                <h1 class="mb-4">Price</h1>
                 <div>
                     {{#with price}}
                     <div>
@@ -405,38 +342,31 @@
                             <div>
                                 <li>
                                     <big><span class="badge rounded-pill text-bg-primary">base: {{base}}</span></big>
-                                    <br>  
                                 </li>
                                 <li>
                                     <big><span class="badge rounded-pill text-bg-warning">destination {{destination}}</span></big>
-                                    <br>  
                                 </li>
                                 <li>
                                     <big><span class="badge rounded-pill text-bg-info">options</span></big>
-                                    <br>  
                                 </li>
                                 <ul>
                                     {{#with options}}
                                     <div>
                                         <li>
                                             <span class="badge rounded-pill text-bg-success">navigation {{navigation}}</span>
-                                            <br>  
                                         </li>
                                         <li>
                                             <span class="badge rounded-pill text-bg-success">moonroof {{moonroof}}</span>
-                                            <br>  
                                         </li>
                                         <li>
                                             <span class="badge rounded-pill text-bg-success">premium paint {{premium_paint}}</span>
-                                            <br>  
                                         </li>
                                     </div>
                                     {{/with}}
                                 </ul>
                             </div>
                         </ul>
-                        <br>
-                        <h3>Total: {{total}}</h3>
+                        <h3 class="mt-4">Total: {{total}}</h3>
                     </div>
                     {{/with}}
                 </div>

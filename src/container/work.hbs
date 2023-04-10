@@ -13,11 +13,9 @@
                 <ul>
                     {{#each works}}
                         <li>
-                            <div>{{position}}</div>
+                            <div class="mb-4">{{position}}</div>
 
-                            <br>
-
-                            <div>
+                            <div class="mb-4">
                                 {{duration.from}} -
                                 {{#if duration.to}} 
                                     {{duration.to}} 
@@ -26,9 +24,7 @@
                                 {{/if}}
                             </div>
 
-                            <br>
-
-                            <div>
+                            <div class="mb-5">
                                 {{#if company.url}}
                                     {{> link text=company.name href=company.url blank=true noLine=true}}
                                 {{else}}
@@ -36,44 +32,34 @@
                                 {{/if}}
                             </div>
 
-                            <br>
-                            <br>
-
-                            <div>
+                            <div class="mb-4">
                                 <strong>
                                     Projects
                                     ({{projectAmount}})
                                 </strong> 
                             </div>
 
-                            <br>
-
                             <ul>
                                 {{#each projects}}
                                 <li>
-                                    <div>
+                                    <div class="mb-4">
                                         {{> link text=name href=url blank=true noLine=true}}
                                     </div>
 
-                                    <br>
-
-                                    <div>
+                                    <div class="mb-4">
                                         <p>
                                             {{about}}
                                         </p>
                                     </div>
 
-                                    <br>
-
-                                    <div>
+                                    <div class="mb-4">
                                         <em>
                                             Project stacks
                                             ({{stackAmount}})
                                         </em>
                                     </div>
 
-                                    <br>
-                                    <div>
+                                    <div class="mb-4">
                                         <ul>
                                             {{#each stacks}}
                                                 <li>
@@ -83,15 +69,11 @@
                                         </ul>
                                     </div>
 
-                                    <br>
-
-                                    <div>
+                                    <div class="mb-4">
                                         <em>
                                             Project awards
                                         </em>
                                     </div>
-
-                                    <br>
 
                                     <div>
                                         <ul>
@@ -106,7 +88,6 @@
                                 {{/each}}
                             </ul>
                         </li>
-                        <br>
                     {{/each}}
                 </ul>
             </div>

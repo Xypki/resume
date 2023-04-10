@@ -6,10 +6,10 @@
     <section>
         <div>
             <div>
-                <div class="card">
+                <div class="card mb-5">
                     {{#with heading}}
                     <div class="card-body">
-                        <div class="card">
+                        <div class="card mb-4">
                             <div class="card-body">
                                 {{#with main}}
                                     <h1>{{title}}</h1>
@@ -27,8 +27,7 @@
                                 {{/with}}
                             </div>
                         </div>
-                        <br>
-                        <div class="card">
+                        <div class="card mb-4">
                             <div class="card-body">
                                 {{#with second}}
                                     <h2>{{title}}</h2>
@@ -46,7 +45,6 @@
                                 {{/with}}
                             </div>
                         </div>
-                        <br>
                         <div class="card">
                             <div class="card-body">
                                 {{#with subblock}}
@@ -68,14 +66,11 @@
                     {{/with}}
                     </div>
                 </div>
-                <br>
-                <br>
-                <div>
+                <div class="mb-5">
                     <div class="card">
                         <div class="card-body">
                         {{#with nested_display}}
-                            <div class="display-1">{{title}}</div>
-                            <br>
+                            <div class="display-1 mb-4">{{title}}</div>
                             <div class="card">
                                 {{#with children_display}}
                                 <div class="card-body">
@@ -105,8 +100,6 @@
                         </div>
                     </div>
                 </div>
-                <br>
-                <br>
                 <div>
                     <div class="card">
                         {{#with paragraph}}
@@ -117,18 +110,16 @@
                             <p class="text-lowercase">
                                 Paragraph
                             </p>
-                            <div>
+                            <div class="mb-3">
                             {{#with button}}
                                 <a href="{{url}}"class="btn btn-link">
                                     {{text}}
                                 </a>
                             {{/with}}
                             </div>
-                            <br>
                             <div class="card">
                                 <div class="card-body">
-                                    <ul>
-                                    <br>
+                                    <ul class="pt-3">
                                         <div class="card">
                                         {{#each list_name}}
                                             <li>

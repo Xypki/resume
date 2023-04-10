@@ -7,7 +7,7 @@
     <section>
         <div>
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
+                <ol class="breadcrumb pt-4">
                     <li class="breadcrumb-item"><a href="#">Category</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Computers & Tablets</li>
                 </ol>
@@ -19,43 +19,31 @@
     <section>
         <div>
             <div>
-                <h1>{{name}}</h1>
-                <br>
+                <h1 class="mb-4">{{name}}</h1>
                 <em>
-                    {{description}}
-                    <br>
-                    <br>
+                    <p class="mb-4">{{description}}</p>
                     <big><span class="badge rounded-pill text-bg-success">Price: {{price}}</span></big>
-                    <br>
-                    <br>
                 </em>
             </div>
-            <br>
-            <hr>
-            <br>
+            <hr class="my-5">
             <div>
                 {{#with features}}
                 <div>
                     {{#with processor}}
-                    <h2>Processor</h2>
-                    <br>
+                    <h2 class="mb-4">Processor</h2>
                     <ul>
                         <div>
                             <li>
                                 <big><span class="badge text-bg-primary">{{brand}}</span></big>
-                                <br>
                             </li>
                             <li>
                                 <big><span class="badge text-bg-secondary">{{model}}</span></big>
-                                <br>
                             </li>
                             <li>
                                 <big><span class="badge text-bg-warning">{{speed}}</span></big>
-                                <br>
                             </li>
                             <li>
                                 <strong>{{cores}} cores</strong>
-                                <br>
                             </li>
                             <li>
                                 <big><span class="badge text-bg-info">{{cache}}</span></big>
@@ -64,22 +52,17 @@
                     </ul>
                     {{/with}}
                 </div>
-                <br>
-                <hr>
-                <br>
+                <hr class="my-5">
                 <div>
                     {{#with memory}}
-                    <h2>Memory</h2>
-                    <br>
+                    <h2 class="mb-4">Memory</h2>
                     <ul>
                         <div>
                             <li>
                                 <big><span class="badge text-bg-primary">{{type}}</span></big>
-                                <br>
                             </li>
                             <li>
                                 <big><span class="badge text-bg-info">{{size}}</span></big>
-                                <br>
                             </li>
                             <li>
                                 <big><span class="badge text-bg-warning">{{speed}}</span></big>
@@ -88,55 +71,42 @@
                     </ul>
                     {{/with}}
                 </div>
-                <br>
-                <hr>
-                <br>
+                <hr class="my-5">
                 <div>
                     {{#with storage}}
-                    <h2>Storage</h2>
-                    <br>
+                    <h2 class="mb-4">Storage</h2>
                     <ul>
                         <div>
                             <li>
                                 <big><span class="badge text-bg-primary">{{type}}</span></big>
-                                <br>
                             </li>
                             <li>
                                 <big><span class="badge text-bg-info">{{size}}</span></big>
-                                <br>
                             </li>      
                         </div>
                     </ul>
                     {{/with}}
                 </div>
-                <br>
-                <hr>
-                <br>
+                <hr class="my-5">
                 <div>
                     {{#with display}}
-                    <h2>Display</h2>
-                    <br>
+                    <h2 class="mb-4">Display</h2>
                     <ul>
                         <div>
                             <li>
                                 <big><span class="badge text-bg-info">{{size}}</span></big>
-                                <br>
                             </li>
                             <li>
                                 <strong>{{resolution}}</strong>
-                                <br>
                             </li>
                             <li>
                                 <big><span class="badge text-bg-primary">{{technology}}</span></big>
-                                <br>
                             </li>
                             <li>
                                 <strong>{{color_space}}</strong>
-                                <br>
                             </li>
                             <li>
                                 <strong>{{brightness}}</strong>
-                                <br>
                             </li>
                             <li>
                                 <big><span class="badge text-bg-warning">{{refresh_rate}}</span></big>
@@ -145,46 +115,34 @@
                     </ul>
                     {{/with}}
                 </div>
-                <br>
-                <hr>
-                <br>
+                <hr class="my-5">
                 <div>
                     {{#with graphics}}
-                    <h2>Graphics</h2>
-                    <br>
+                    <h2 class="mb-4">Graphics</h2>
                     <ul>
                         <div>
                             <li>
                                 <big><span class="badge text-bg-primary">{{brand}}</span></big>
-                                <br>
                             </li>
                             <li>
                                 <big><span class="badge text-bg-secondary">{{model}}</span></big>
-                                <br>
                             </li>
                             <li>
                                 <big><span class="badge text-bg-info">{{memory}}</span></big>
-                                <br>
                             </li> 
                         </div>
                     </ul>
                     {{/with}}
                 </div>
-                <br>
-                <hr>
-                <br>
+                <hr class="my-5">
                 <div>
-                    <h2>Ports</h2>
+                    <h2 class="mb-4">Ports</h2>
                     {{#each ports}}
-                    <br>
                     <ul>
                         <div>
                             <li>
-                                <big><span class="badge text-bg-primary">{{type}}</span></big>
-                                <br>
-                                <br>
+                                <big><span class="badge text-bg-primary mb-4">{{type}}</span></big>
                                 <strong>Count: {{count}}</strong>
-                                <br>
                                 {{#each features}}
                                     <div>
                                         <em>{{this}}</em>
@@ -195,22 +153,17 @@
                     </ul>
                     {{/each}}
                 </div>
-                <br>
-                <hr>
-                <br>
+                <hr class="my-5">
                 <div>
                     {{#with battery}}
-                    <h2>Battery</h2>
-                    <br>
+                    <h2 class="mb-4">Battery</h2>
                     <ul>
                         <div>
                             <li>
                                 <big><span class="badge text-bg-primary">{{type}}</span></big>
-                                <br>
                             </li>
                             <li>
                                 <strong>{{capacity}}</strong>
-                                <br>
                             </li>   
                             <li>
                                 <strong>{{life}}</strong>
@@ -219,28 +172,21 @@
                     </ul>
                     {{/with}}
                 </div>
-                <br>
-                <hr>
-                <br>
+                <hr class="my-5">
                 <div>
                     <h2>Weight: {{weight}}</h2>
                 </div>
-                <br>
-                <hr>
-                <br>
+                <hr class="my-5">
                 <div>
                     {{#with dimensions}}
-                    <h2>Dimensions</h2>
-                    <br>
+                    <h2 class="mb-4">Dimensions</h2>
                     <ul>
                         <div>
                             <li>
                                 <big><span class="badge text-bg-info">Height: {{height}}</span></big>
-                                <br>
                             </li>
                             <li>
                                 <big><span class="badge text-bg-info">Widht: {{width}}</span></big>
-                                <br>
                             </li> 
                             <li>
                                 <big><span class="badge text-bg-info">Depth: {{depth}}</span></big>
@@ -249,25 +195,19 @@
                     </ul>
                     {{/with}}
                 </div>
-                <br>
-                <hr>
-                <br>
+                <hr class="my-5">
                 <div>
                     <h2>Operating system: {{operating_system}}</h2>
                 </div>
-                <br>
-                <hr>
-                <br>
+                <hr class="my-5">
                 <div>
-                    <h2>Accessories</h2>
+                    <h2 class="mb-4">Accessories</h2>
                     {{#each accessories}}
-                    <br>
                     <ul>
                         <div>
                             <li>
-                                <big><span class="badge text-bg-primary">{{name}}</span></big>
-                                <br>
-                                <big><span class="badge rounded-pill text-bg-success">Price: {{price}}</span></big>
+                                <p class="mb-0"><big><span class="badge text-bg-primary">{{name}}</span></big></p>
+                                <p class="mb-0"><big><span class="badge rounded-pill text-bg-success">Price: {{price}}</span></big></p>
                             </li>
                         </div>
                     </ul>
