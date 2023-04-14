@@ -1,0 +1,19 @@
+<div class="ms-4 my-5 pt-2">
+    {{#with navigation}}
+    <div class="card px-0">
+        <div class="card-body px-0 py-0">
+            <nav class="navbar">
+                <div class="container-fluid px-0">
+                    <ul class="nav">
+                        {{#each links}}
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{{href}}">{{text}}</a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    {{/with}}
+</div>
