@@ -4,19 +4,7 @@
 --}}
 <div class="ms-4">
     <section>
-        <div class="mb-5 ms-4">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    {{#each breadcrumb}}
-                    {{#if @last}}
-                    <li class="breadcrumb-item {{#if @last}} active {{/if}}" aria-current="page">{{name}}</li>
-                    {{else}}
-                     <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li>
-                    {{/if}}
-                    {{/each}}
-                </ol>
-            </nav>
-        </div>
+        {{> breadcrumb}}
     </section>
     <section>
         <div>

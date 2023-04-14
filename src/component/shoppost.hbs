@@ -1,0 +1,23 @@
+<div class="row">
+    {{#each cards}}
+    <div class="col-md-3">
+        <div class="card text-bg-dark mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{title}}                                 
+                {{#if isTop}}
+                <span class="badge text-bg-warning rounded-pill">TOP!</span>
+                {{/if}}
+                {{#if idNew}}
+                <span class="badge text-bg-primary rounded-pill">New</span>
+                {{else}}
+                {{#if isNew}}
+                <span class="badge text-bg-primary rounded-pill">New</span>
+                {{/if}}
+                {{/if}}
+                </h5>
+                <p class="card-text">{{description}}</p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
