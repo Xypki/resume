@@ -1,0 +1,73 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+<div class="ms-4">
+    <section>
+        <div>
+            <div>
+                {{#with header}}
+                <h1 class="mb-4">{{title}}</h1>
+                <div>
+                    {{#with button}}
+                    <button type="button" class="btn btn-outline-secondary" href="{{link}}">{{text}}</button>
+                    {{/with}}
+                </div>
+                {{/with}}
+            </div>
+            <hr class="my-5">
+            <div>
+                {{> cartGoodsBlock}}
+            </div>
+            <hr class="my-5">
+            <div>
+                {{#with total}}
+                <h2 class="mb-3">{{title}}</h2>
+                <h1>{{amount}}</h1>
+                <p class="mb-4 mt-2">{{delivery}}</p>
+                {{#each buttons}}
+                    <div>
+                    {{#if isSuccess}}
+                    <button type="button" class="btn btn-success mb-3" href="{{link}}">{{text}}</button>
+                    {{else}}
+                    {{#if isOutline}}
+                    <button type="button" class="btn btn-outline-success" href="{{link}}">{{text}}</button>
+                    {{/if}}
+                    {{/if}}
+                    </div>
+                {{/each}}
+                {{/with}}
+            </div>
+            <hr class="my-5">
+            <div>
+                {{#with goodsOtherBlock}}
+                <div>
+                    <h2 class="text-center mb-3">{{title}}</h2>
+                    {{> shopcard}}
+                </div>
+                {{/with}}
+            </div>
+            <hr class="my-5">
+            <div>
+                {{#with subscribe}}
+                <div class="alert bg-dark text-light py-2 px-0">
+                    <div class="mx-2">
+                        <h2 class="mb-3">{{header}}</h2>
+                        <p class="mb-4">{{description}}</p>
+                    </div>
+                    {{#each buttons}}
+                    <div class="mt-2">
+                        <button class="btn btn-primary ms-2" href="{{link}}">{{text}}</button>
+                    </div>
+                    {{/each}}
+                </div>
+                {{/with}}
+            </div>
+        </div>
+    </section>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
