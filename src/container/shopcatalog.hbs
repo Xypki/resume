@@ -1,0 +1,177 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+<div class="ms-4">
+    <section>
+        <div>
+            <div>
+                {{> breadcrumb}}
+            </div>
+            <h1 class="mb-4">{{header}}</h1>
+            <div class="row mb-4">
+                {{#each sortBlock}}
+                <div class="col-md-3">
+                    <select class="form-select mb-3">
+                        <option selected>{{placeholder}}</option>
+                        {{#each options}}
+                        <option value="{{value}}">{{text}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                {{/each}}
+            </div>
+            <div class="row ">
+                <div class="col-md-4">
+                    {{#with filterBlock}}
+                    <div class="card">
+                        <div class="card-body py-2">
+                            <div>
+                            {{#with sellers}}
+                                <h6 class="mb-3">{{title}}</h6>
+                                {{#each list}}
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">
+                                        {{value}}
+                                    </label>
+                                </div>
+                                {{/each}}
+                            {{/with}}
+                            </div>
+                            <hr class="my-3">
+                            <div>
+                            {{#with brands}}
+                                <h6 class="mb-3">{{title}}</h6>
+                                {{#with input}}
+                                <div class="mb-3">
+                                    <input class="form-control" placeholder="{{placeholder}}">
+                                </div>
+                                {{/with}}
+                                {{#each options}}
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">
+                                        {{value}}
+                                    </label>
+                                </div>
+                                {{/each}}
+                            {{/with}}
+                            </div>
+                            <hr class="my-3">
+                            <div>
+                            {{#with price}}
+                                <h6 class="mb-3">{{title}}</h6>
+                                {{#with range}}
+                                <div class="mb-3">
+                                    <input class="form-control" placeholder="{{from}}">
+                                </div>
+                                <div class="mb-3">
+                                    <input class="form-control" placeholder="{{to}}">
+                                </div>
+                                {{/with}}
+                                {{#with button}}
+                                    <button type="button" class="btn btn-outline-secondary" href="{{link}}">{{text}}</button>
+                                {{/with}}
+                            {{/with}}
+                            </div>
+                            <hr class="my-3">
+                            <div>
+                            {{#each filterList}}
+                                <h6 class="mb-3">{{title}}</h6>
+                                {{#each options}}
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">
+                                        {{value}}
+                                    </label>
+                                </div>
+                                {{/each}}
+                                <hr class="my-3">
+                                {{#if @last}}
+                                <h6 class="mb-3">{{title}}</h6>
+                                {{#each options}}
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">
+                                        {{value}}
+                                    </label>
+                                </div>
+                                {{/each}}
+                                {{/if}}
+                            {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    {{/with}}
+                </div>
+                {{#each goodsList}}
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="{{img}}" class="card-img-top" alt="Image">
+                        <div class="card-body py-2">
+                            <div class="mb-3">
+                            {{#if isHot}}
+                                <span class="badge text-bg-warning text-light rounded-pill">HOT!</span>
+                            {{/if}}
+                            {{#if isNew}}
+                                <span class="badge text-bg-primary rounded-pill">Нове</span>
+                            {{/if}}
+                            </div>
+                            <div>
+                                <div>
+                                {{#if isFast}}
+                                    <span class="badge text-bg-success mb-1">Швидка доставка</span>
+                                {{/if}}
+                                </div>
+                                <div>
+                                {{#if isFree}}
+                                    <span class="badge text-bg-secondary">Безкоштовна доставка</span>
+                                {{/if}}
+                                </div>
+                            </div>
+                            <h5 class="my-3">{{name}}</h5>
+                            <div>
+                                {{#with review}}
+                                {{amount}} {{text}}
+                                {{/with}}
+                            </div>
+                            <h4 class="my-3">{{price}}</h4>
+                            {{delivery}}
+                            <div class="mt-3">
+                                {{#each buttons}}
+                                <div>
+                                {{#if isPrimary}}
+                                    <button type="button" class="btn btn-primary mb-2" href="{{link}}">{{text}}</button>
+                                {{/if}}
+                                </div>
+                                <div>
+                                {{#if isSecondary}}
+                                    <button type="button" class="btn btn-secondary mb-3" href="{{link}}">{{text}}</button>
+                                {{/if}}
+                                </div>
+                                {{/each}}
+                            </div>
+                            <div>
+                                <ul>
+                                {{#each characteristics}}
+                                    <li>{{title}}: {{value}}</li>
+                                {{/each}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            <div class="mt-5">
+                {{> shopaction}}
+            </div>
+        </div>
+    </section>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
