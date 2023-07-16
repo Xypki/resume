@@ -2825,7 +2825,7 @@ router.get('/shopprofile', function (req, res) {
           number: '№12587463 від 01.01.2023',
           status: 'Виконано',
           amount: { title: 'Сума', value: '25 000 ₴' },
-          images: ['https://picsum.photos/110/100'],
+          images: ['https://picsum.photos/70/70'],
           button: {
             text: 'Детальніше',
             link: 'https://www.youtube.com/',
@@ -2837,9 +2837,9 @@ router.get('/shopprofile', function (req, res) {
           status: 'Виконано',
           amount: { title: 'Сума', value: '25 000 ₴' },
           images: [
-            'https://picsum.photos/110/100',
-            'https://picsum.photos/110/100',
-            'https://picsum.photos/110/100',
+            'https://picsum.photos/70/70',
+            'https://picsum.photos/70/70',
+            'https://picsum.photos/70/70',
           ],
           button: {
             text: 'Детальніше',
@@ -2852,8 +2852,8 @@ router.get('/shopprofile', function (req, res) {
           status: 'Виконано',
           amount: { title: 'Сума', value: '25 000 ₴' },
           images: [
-            'https://picsum.photos/110/100',
-            'https://picsum.photos/110/100',
+            'https://picsum.photos/70/70',
+            'https://picsum.photos/70/70',
           ],
           button: {
             text: 'Детальніше',
